@@ -146,7 +146,7 @@ function searchClearArea(grid, row, col, numRows, numCols) {
     let gridCell = grid[row][col];
     gridCell.clear = true;
     gridCell.cellEl.classList.add("clear");
-    changecolor(grid,cellRow,cellCol);
+    
 
     for (let [drow, dcol] of directions) {
         let cellRow = row + drow;
@@ -160,7 +160,7 @@ function searchClearArea(grid, row, col, numRows, numCols) {
         if (!gridCell.clear) {
             gridCell.clear = true;
             gridCell.cellEl.classList.add("clear");
-            
+            changecolor(grid,cellRow,cellCol);
             if (gridCell.count === 0) {
                 searchClearArea(grid, cellRow, cellCol, numRows, numCols);
             } else if (gridCell.count > 0) {
@@ -171,7 +171,7 @@ function searchClearArea(grid, row, col, numRows, numCols) {
 }
 
 function explode(grid, row, col, numRows, numCols) {
-   
+    alert("you are lose");
     grid[row][col].cellEl.classList.add("exploded");
 
     for (let cellRow = 0; cellRow < numRows; cellRow++) {
@@ -210,7 +210,7 @@ function checkAllClear(grid) {
             cell.cellEl.classList.add("success");
         }
     }
-    
+    alert("you are win");
     return true;
 }
 
