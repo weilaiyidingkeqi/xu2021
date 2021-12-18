@@ -1,0 +1,52 @@
+
+#body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+    
+
+.game-pane {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    background-color: rgb(14, 87, 75);
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.cell {
+    background-color: rgb(99, 98, 95);
+    width: 1.5em;
+    height: 1.5em;
+
+    border-style: outset;
+
+    text-align: center;
+
+    user-select: none;
+}
+
+.clear {
+    border-style: solid;
+    border-color: #eee;
+    background-color: rgb(190, 202, 155);
+}
+
+.cell.landmine {
+    background-color: orange;
+    background:url(mine.jpg);
+    background-size: cover;
+}
+
+.cell.landmine.exploded {
+    background-color: red;
+}
+
+.cell.landmine.success {
+    background-color: green;
+}
+
+        
