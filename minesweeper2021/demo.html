@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>扫雷游戏</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+<style>
+  body {
+    background-image: url(4.jpg);
+  }
+</style>
+
+
+
+  <script>
+    function changestyle(){
+    document.body.style.backgroundImage="url(2.jpg)";
+    }
+    function changestyle2(){
+      document.body.style.backgroundImage="url(4.jpg)";
+    }
+    function changestyle3(){
+      document.body.style.backgroundImage="url(5.jpg)";
+    }
+  </script>
+
+
+
+</head>
+<body id="body">
+  <input type="button" onclick="changestyle()" value="星空"   class="jpg2"/>
+  <input type="button" onclick="changestyle2()" value="默认"  class="jpg1"/>
+  <input type="button" onclick="changestyle3()" value="简约"  class="jpg3"/>
+  <div class="game-pane">
+    <table id="board">
+      <div style="text-align: center;">
+      <button   onclick="easy()" class='btn'>简单</button>
+      <button   onclick="normal()" class='btn'>中等 </button>
+      <button   onclick="hard()" class='btn'>高级</button>
+      </div>
+      
+    </table>
+  </div>
+  <div>
+
+  
+
+  </div>
+
+  
+
+</select>
+  <script src="script.js"></script>
+</body>
+</html>
